@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - stable
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+before_script:
+  - echo 'before_script'
+
+jobs:
+  include:
+    - stage: "stage 1"
+      env: FOO=foo
+      script: echo 'script stage 1'
+    - stage: "stage 2"
+      script: echo 'script stage 2'
+
+after_script:
+  - echo 'after_script'
