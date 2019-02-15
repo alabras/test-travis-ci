@@ -1,6 +1,6 @@
 #!bin/bash
-if [ "$1" == "foo" ]; then
-    echo 'after_deploy'
+if [ "$1" == "cron" ]; then
+    echo 'after_deploy cron'
 else
-    echo 'NOOOOP'
+    echo 'after_deploy pr'
 fi

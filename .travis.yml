@@ -19,4 +19,4 @@ jobs:
       script: echo 'script stage 2'
 
 after_script:
-  - bash ./after.sh $FOO
+  - bash ./after.sh type
