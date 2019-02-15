@@ -19,5 +19,5 @@ jobs:
       script: echo 'script stage 2'
 
 after_script:
-  - test FOO=foo \
-    echo 'after_script'
+  - test $FOO = foo \
+    && echo 'after_script'
