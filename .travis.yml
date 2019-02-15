@@ -12,11 +12,11 @@ before_script:
 jobs:
   include:
     - stage: "stage 1"
-      script: test FOO=foo \ 
-              echo 'script stage 1'
+      if: env(FOO) = foo
+      script: echo 'script stage 1'
     - stage: "stage 2"
-      script: test FOO=hjhjhjhj \
-              echo 'script stage 2'
+      if: env(FOO) = fasas
+      script: echo 'script stage 2'
 
 after_script:
   - test FOO=foo \
