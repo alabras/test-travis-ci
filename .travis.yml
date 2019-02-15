@@ -15,8 +15,9 @@ jobs:
       env: FOO=foo
       script: echo 'script stage 1'
     - stage: "stage 2"
+      env: FOO=hotro
       script: echo 'script stage 2'
 
 after_script:
-  - test $FOO = foo \
+  - test FOO=foo \
     echo 'after_script'
